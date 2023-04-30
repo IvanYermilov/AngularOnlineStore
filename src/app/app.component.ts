@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
      
 @Component({
-    selector: 'home',
-    templateUrl: './templates/home.component.html'
+    selector: 'app-comp',
+    templateUrl: './templates/app.component.html',
+    styleUrls: ['./styles/app.component.css']
 })
 export class AppComponent { 
-    name= '';
 }
+
