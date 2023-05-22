@@ -1,22 +1,25 @@
-import { NgModule }      from '@angular/core';
+import { Component, NgModule }      from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent }   from './app.component';
-import { HomeComponent } from './components/home.component';
-import { ProductsComponent } from './components/products.component';
-import { HomeModule } from './modules/home.module'
+import { NavbarComponent } from './components/navigtation-bar/navbar.component'
+import { ProductsComponent } from './modules/products/products.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-    { path: 'home', component: HomeComponent },
+    {
+      path: 'home',
+      loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
+    },
     { path: 'products', component: ProductsComponent },
-    { path: '', redirectTo: '/default-route', pathMatch: 'full' },
-    { path: 'default-route', component: HomeComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
   ];
 
+  // templates/navigation-buttons.html cscc
 @NgModule({
-    imports:      [ BrowserModule, FormsModule, HomeModule, RouterModule.forRoot(routes) ],
-    declarations: [ AppComponent, ProductsComponent ],
+    imports:      [ BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot(routes) ],
+    declarations: [ AppComponent, ProductsComponent, NavbarComponent ],
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
