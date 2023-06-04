@@ -1,0 +1,26 @@
+
+.sizes {
+    display: flex;
+    align-items: stretch;
+}
+.option + .option {
+    margin-left: 11px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 34px;
+    height: 29px;
+    border: 1px solid #E4E4E4;
+
+}
+
+.value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #737373;
+}
