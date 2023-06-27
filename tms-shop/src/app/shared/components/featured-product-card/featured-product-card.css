@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  height: 65vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  border-radius: 10px;
+  background-image: url(./../../../../assets/featured-product-card-component/image.jpg);
+  width: 100%;
+  height: 45vh;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.title {
+  color: #252B42;
+}
+
+.color-title {
+  color: #BDBDBD;
+}
+
+.price {
+  color: #252B42;
+  font-weight: 500;
+  font-size: 24px;
+}/*# sourceMappingURL=featured-product-card.css.map */

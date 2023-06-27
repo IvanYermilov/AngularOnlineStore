@@ -1,0 +1,29 @@
+.option + .option {
+  margin-left: 8px;
+}
+
+.option {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 13px 13px;
+  border: 2px solid white;
+  border-radius: 100%;
+  color: #000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.blue {
+  background-color: #2091F9;
+}
+
+.green {
+  background-color: #2DC071;
+}
+
+.orange {
+  background-color: #E77C40;
+}
+
+.black {
+  background-color: #252B42;
+}/*# sourceMappingURL=color-picker.css.map */
